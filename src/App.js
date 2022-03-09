@@ -13,7 +13,7 @@ function App() {
     if(storedUserLoggedInInformation === '1'){
       setIsLoggedIn(true);
     }
-  }, [])
+  }, []) // no dependencies mean, this runs only when the component is mounted and never after that, which is what we want
 
   const loginHandler = (email, password) => {
     // We should of course check email and password
